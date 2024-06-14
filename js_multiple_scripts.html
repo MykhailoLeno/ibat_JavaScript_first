@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="say_hello_function_external.js"></script>
+  <!-- Open teg script and specifies the script type as 'text/javascript' -->
+  <!-- Specifies the path to the external script 'say_hello_function_external.js'-->
+
+  <script type="text/javascript" src="scripts\js_is_nice.js"></script>
+  <!-- Open teg script and specifies the script type as 'text/javascript' -->
+  <!-- Specifies the path to the external script 'scripts\js_is_nice.js'-->
+
+</head>
+
+<body>
+  <input type="button" onclick="sayHello()" value="Say Hello" />
+  <!-- Create a button with text "Say Hello", and when we click on this button, the function sayHello() will be executed,
+  this function must be defined in file "say_hello_function_external.js" -->
+
+  <br />
+  <input type="button" onclick="jsIsNice()" value="JS is nice" />
+  <!-- Create a button "JS is nice" and when click on it, the function jsIsNice() will be executed from file "scripts\js_is_nice.js" -->
+
+</body>
+
+</html>
