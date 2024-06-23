@@ -19,8 +19,14 @@ buttons.forEach(button => {
             operand1 = null;
             display.value = "";
 
-        } else if (value === "=") {
-            if (operand1 !== null && operator && currentInput) {
+        } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+            if (currentInput) {
+                operand1 = parseFloat(currentInput);
+                currentInput = '';
+                operator = value;
+            }
+        } else {
+            if (operand1 && operator && currentInput) {
                 const operand2 = parseFloat(currentInput);
 
                 switch (operator) {
@@ -42,12 +48,6 @@ buttons.forEach(button => {
             operand1 = null;
             operator = "";
             currentInput = display.value;
-        } else {
-            if (currentInput) {
-                operand1 = parseFloat(currentInput);
-                operator = value;
-                currentInput = '';
-            }
         }
     });
 });
